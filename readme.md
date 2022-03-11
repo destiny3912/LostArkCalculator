@@ -1,7 +1,8 @@
 <h1>1.Intro</h1>
 <h5>로스트아크 스펙 효율 계산기 입니다 ver 1.0.0</h5>
 <h1>2.Tech stack</h1>
-<h5>Maven java project</h5>
+<h5>Maven java project </h5>
+<h5>jdk version : jdk-16.0.1</h5>
 <h1>3.Usage</h1>
 <h5>본 레포지토리에 올려놓은 exe 파일을 다운 받아 사용하시면 됩니다.</h5>
 <h5>파일은 우측 릴리즈 탭에 버전을 누르면 다운 받을 수 있습니다.</h5>
