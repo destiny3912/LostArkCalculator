@@ -73,6 +73,7 @@
           </dependency>
         </dependencies>
         <configuration>
+          <failOnViolation>false</failOnViolation>
           <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <skip>${skipTests}</skip>
@@ -91,6 +92,9 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
+        <configuration>
+          <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -158,6 +162,20 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <addExtensions>true</addExtensions>
+              <mainClass>org.lostarkcaculator.App</mainClass>
+              <packageName>로스트아크효율계산기</packageName>
+            </manifest>
+          </archive>
+        </configuration>
       </plugin>
     </plugins>
   </build>

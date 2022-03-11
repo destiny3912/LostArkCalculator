@@ -1,0 +1,4 @@
+# Created at 2022-03-11T22:10:45.004
+Boot Manifest-JAR contains absolute paths in classpath 'd:\LostArkCalculator\program\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
