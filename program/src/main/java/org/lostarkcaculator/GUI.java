@@ -24,28 +24,33 @@ public class GUI extends JFrame{
         northPane = new JPanel();
         northPane.setLayout(new FlowLayout());
         southPane = new JPanel();
+        southPane.setLayout(new FlowLayout());
         westPane = new JPanel();
         eastPane = new JPanel();
         centerPane = new JPanel();
+        centerPane.setLayout(new FlowLayout());
 
         mainFrame.add(northPane, BorderLayout.NORTH);
         mainFrame.add(southPane, BorderLayout.SOUTH);
         mainFrame.add(westPane, BorderLayout.WEST);
         mainFrame.add(eastPane, BorderLayout.EAST);
-        mainFrame.add(centerPane, BorderLayout.SOUTH);
+        mainFrame.add(centerPane, BorderLayout.CENTER);
 
         introText = new JLabel();
-        introText.setText("로스트아크 계산 공식 계산기 입니다.");
+        introText.setText("로스트아크 스펙 효율 계산기 입니다.");
         introText.setFont(introFont);
         northPane.add(introText);
+
+        copyRightText = new JLabel();
+        copyRightText.setText("Made my 버프쓰는사람@루페온");
+        copyRightText.setFont(introFont);
+        southPane.add(copyRightText);
 
         coolDownButton = new JButton("쿨타임 계산");
         centerPane.add(coolDownButton);
         coolDownButton.addActionListener(new Actions());
 
-        copyRightText = new JLabel();
-        copyRightText.setText("Made my 버프쓰는사람@루페온 \n 버그제보 : vc54@naver.com");
-        southPane.add(copyRightText);
+        
     }
 
     class Actions implements ActionListener
@@ -55,7 +60,7 @@ public class GUI extends JFrame{
         {
             if(e.getSource() == coolDownButton)
             {
-
+                new CoolDown();
             }
         }
     }
